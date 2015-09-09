@@ -6,4 +6,6 @@
 *.ear
 .classpath
 .project
+classes/*
+
 
