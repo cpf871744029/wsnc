@@ -1,3 +1,9 @@
 /*.class
 /*/*.class
 /*/*/*.class
+*.jar
+*.war
+*.ear
+.classpath
+.project
+
