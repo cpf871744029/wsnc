@@ -1,12 +1,9 @@
 .idea/*
 out/*
 *.iml
-/*.class
-/*/*.class
-/*/*/*.class
-*.war
-*.ear
 classes/*
+.project
+.classpath
 
 
 
