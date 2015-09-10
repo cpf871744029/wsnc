@@ -4,6 +4,8 @@
  */
 package core;
 
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,6 +14,8 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 import java.util.StringTokenizer;
+
+import util.BufferreadDemo;
 
 /**
  * A message that is created at a node or passed between nodes.
@@ -78,8 +82,9 @@ public class Message implements Comparable<Message> {
 	 *            same for all replicates of the message)
 	 * @param size
 	 *            Size of the message (in bytes)
+	 * @throws IOException 
 	 */
-	public Message(DTNHost from, DTNHost to, String id, int size) {
+	public Message(DTNHost from, DTNHost to, String id, int size){
 		this.from = from;
 		this.to = to;
 		this.id = id;
@@ -99,9 +104,9 @@ public class Message implements Comparable<Message> {
 		this.payload = new int[size];
 		Random generator = new Random();
 		//Arrays.fill(payload, (byte) generator.nextInt());
-		for(int i=0;i<size;i++){
-			payload[i] = generator.nextInt(254)+1;
-		}
+		
+			payload = new BufferreadDemo().transform(size);
+		
 //		if(id.equals("M59")){
 //			System.out.print("M59: ");
 //			for(int i=0;i<size;i++){
@@ -420,6 +425,7 @@ public class Message implements Comparable<Message> {
 	 * Returns a replicate of this message (identical except for the unique id)
 	 * 
 	 * @return A replicate of the message
+	 * 
 	 */
 	public Message replicate() {
 		Message m = new Message(from, to, id, size);

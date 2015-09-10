@@ -2,8 +2,6 @@
 out/*
 *.iml
 classes/*
-.project
-.classpath
-
+reports/Demo/*
 
 

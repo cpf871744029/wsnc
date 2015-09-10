@@ -56,7 +56,7 @@ Group.maxAfterShoppingStopTime = 7200
 Group1.groupID = H
 Group1.speed = 1.5, 5
 Group1.waitTime = 0, 0
-Group1.nrofHosts = 200
+Group1.nrofHosts = 100
 Group1.nrofInterfaces = 1
 Group1.interface1 = btInterface
 Group1.movementModel = HotShortestPathMapBasedMovement
@@ -65,7 +65,7 @@ Group1.movementModel = HotShortestPathMapBasedMovement
 Group2.groupID = W
 Group2.speed = 0,0
 Group2.waitTime = 0,0
-Group2.nrofHosts = 20
+Group2.nrofHosts = 10
 Group2.bufferSize = 1000M
 Group2.nrofInterfaces = 2
 Group2.interface1 = btInterface
@@ -116,10 +116,10 @@ Events1.class = MessageEventGenerator
 # Creation interval in seconds (one new message every 25 to 35 seconds)
 Events1.interval = 15,25
 # Message sizes (500kB - 1MB)
-Events1.size = 500
+Events1.size = 200
 # range of message source/destination addresses
-Events1.hosts = 0,199
-Events1.tohosts = 220,220
+Events1.hosts = 0,99
+Events1.tohosts = 110,110
 # Message ID prefix
 Events1.prefix = M
 
@@ -136,16 +136,11 @@ Report.reportDir = reports/
 # Report classes to load
 #Report.report1 = InterContactTimesReport
 
-
-#Report.report4 = TotalEncountersReport
-#Report.report5 = EncountersVSUniqueEncountersReport
-#Report.report6 = ContactsDuringAnICTReport
 Report.reportDir = reports/Demo
 Report.report1 = MessageStatsReport
 Report.report2 = CreatedMessagesReport
 Report.report3 = MessageDeliveryReport
-#Report.report8 = ContactsPerHourReport
-#Report.report2 = CreatedMessagesReport
+
 ## Default settings for some routers settings
 ProphetRouter.secondsInTimeUnit = 30
 SprayAndWaitRouter.nrofCopies = 6
