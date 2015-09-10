@@ -4,7 +4,6 @@ out/*
 /*.class
 /*/*.class
 /*/*/*.class
-*.jar
 *.war
 *.ear
 classes/*
