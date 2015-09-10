@@ -19,7 +19,7 @@ public class BufferreadDemo {
 		   } catch(IOException e){
 			   e.printStackTrace();
 		   }
-		System.out.println(s);
+		
 		    //System.out.println(n);
 			if(s!=null){
 			System.out.println("¶Á³öµÄ×Ö·û´®ÊÇ£º"+s);
