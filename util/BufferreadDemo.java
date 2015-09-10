@@ -18,11 +18,7 @@ public class BufferreadDemo {
 		   } catch(IOException e){
 			   e.printStackTrace();
 		   }
-		//System.out.println(s);
-		    //System.out.println(n);
 			if(s!=null){
-		//	System.out.println("读出的字符串是："+s);
-			//每行字符串的长度
 			int le=s.length();
 			//System.out.println("读出的字符串长度是："+le);
 			byte[] byteBuffer;
