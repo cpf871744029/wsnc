@@ -25,6 +25,7 @@ import core.SettingsError;
 import core.SimClock;
 import core.SimError;
 import util.Tuple;
+import util.BufferreadDemo;
 import routing.network_coding.Network_coding;
 import routing.util.RoutingInfo;
 
@@ -556,12 +557,14 @@ public abstract class MessageRouter {
 					 if (isFirstDelivery2) {
 						 can_decode=true;							
 						 System.out.println("output:"+mn.getId()+ "\tcreate time:"+mn.getCreationTime());
-//						 if(mn.getId().equals("M59")){
-//								//System.out.print("M9: ");
+//						 if(mn.getId().equals("M181")){
+//								System.out.print("after Decode, M181: ");
 //								for(int y=0;y<mn.getPayload().length;y++){
-//									System.out.print(mn.getPayload()[y]+" ");
+//									System.out.print(String.format("%4d",mn.getPayload()[y]));
 //								}
 //								System.out.println();
+//							 String parse = new BufferreadDemo().transString(mn.getPayload());
+//							 System.out.println("parse String :"+parse);
 //							}
 						this.deliveredMessages.put(mn.getId(), mn);			
 						for (MessageListener ml : this.mListeners) {

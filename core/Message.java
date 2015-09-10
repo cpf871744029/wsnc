@@ -104,13 +104,13 @@ public class Message implements Comparable<Message> {
 		this.payload = new int[size];
 		Random generator = new Random();
 		//Arrays.fill(payload, (byte) generator.nextInt());
-		
-			payload = new BufferreadDemo().transform(size);
-		
-//		if(id.equals("M59")){
-//			System.out.print("M59: ");
+
+			payload = new BufferreadDemo().transform(size,id);
+
+//		if(id.equals("M181")){
+//			System.out.print("before Decode, M181: ");
 //			for(int i=0;i<size;i++){
-//				System.out.print(payload[i]+" ");
+//				System.out.print(String.format("%4d",payload[i]));
 //			}
 //			System.out.println();
 //		}
